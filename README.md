@@ -18,7 +18,24 @@ Please ★ this repo if you found it useful ★ ★ ★
 
 ## Usage
 
-[Contribute](https://github.com/codejamninja/prisma-apollo-example/blob/master/CONTRIBUTING.md) usage docs
+First install the dependancies
+
+```sh
+yarn
+```
+
+Run each of the following commands in a different terminal
+
+| Terminal 1  | Terminal 2        | Terminal 3 |
+| `yarn data` | `yarn prisma dev` | `yarn start` |
+
+You will need to run `yarn start` every time you make new changes
+
+Open the following links
+
+[http://localhost:4000](http://localhost:4000) - GraphQL Server
+[http://localhost:5555](http://localhost:5555) - Database Explorer
+
 
 ## Support
 

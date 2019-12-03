@@ -1,0 +1,14 @@
+generator photon {
+  provider = "photonjs"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://user:pass@localhost/data?schema=data"
+}
+
+model User {
+  id    String  @default(cuid()) @id
+  username String  @unique
+  password String
+}

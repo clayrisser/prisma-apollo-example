@@ -1,10 +1,11 @@
 import { ApolloServer } from 'apollo-server';
-import resolvers from './resolvers';
-import typeDefs from './typeDefs';
+import { Photon } from '@prisma/photon';
+import schema from './schema';
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const photon = new Photon();
+const server = new ApolloServer({ schema, context: { photon } });
 
 (async () => {
-  const { url } = await server.listen();
-  console.log(`Server ready at ${url}`);
+  const { url } = await server.listen({ port: 4000 });
+  console.log(`server ready at ${url}`);
 })();

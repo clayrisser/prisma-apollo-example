@@ -78,3 +78,5 @@ typings/
 package-lock.json
 yarn.lock
 tsconfig.tsbuildinfo
+prisma/migrations/dev
+/src/generated

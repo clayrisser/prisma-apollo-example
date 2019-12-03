@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql:
+    image: postgres:12.1
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: data
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data: ~
