@@ -35,6 +35,7 @@ You will need to run `yarn start` every time you make new changes
 Open the following links
 
 [http://localhost:4000](http://localhost:4000) - GraphQL Server
+
 [http://localhost:5555](http://localhost:5555) - Database Explorer
 
 ## Support
