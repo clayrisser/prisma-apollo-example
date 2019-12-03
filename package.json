@@ -81,7 +81,8 @@
     "node": ">=6.0.0"
   },
   "eslintIgnore": [
-    "lib"
+    "lib",
+    "src/generated"
   ],
   "jest": {
     "testRegex": "tests(/|/.*/)[^_/]*[jt]sx?$",
