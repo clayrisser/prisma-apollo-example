@@ -38,15 +38,6 @@ Open the following links
 
 [http://localhost:5555](http://localhost:5555) - Database Explorer
 
-Run the following query to create a user
-
-```graphql
-mutation {
-  register(username: "hello", password: "world") {
-    username
-  }
-}
-```
 
 ## Support
 
