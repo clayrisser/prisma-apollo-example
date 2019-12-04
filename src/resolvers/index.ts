@@ -1,3 +1,6 @@
-import { UserRelationsResolver } from '../generated/type-graphql';
+import { NonEmptyArray } from 'type-graphql/dist/utils/types';
+import { UserCrudResolver } from '../generated/type-graphql';
 
-export default [UserRelationsResolver];
+export default [UserCrudResolver] as
+  | NonEmptyArray<Function>
+  | NonEmptyArray<string>;
