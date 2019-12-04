@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "incremental": true,
     "lib": ["esnext", "dom"],
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "Node",
     "outDir": "lib",
     "resolveJsonModule": true,
@@ -17,5 +17,5 @@
     "strictPropertyInitialization": false,
     "target": "esnext"
   },
-  "include": ["src"]
+  "include": ["src", "node_modules/@generated/type-graphql"]
 }

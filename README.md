@@ -42,7 +42,9 @@ Run the following query to create a user
 
 ```graphql
 mutation {
-  register(username: "hello", password: "world") { username }
+  register(username: "hello", password: "world") {
+    username
+  }
 }
 ```
 

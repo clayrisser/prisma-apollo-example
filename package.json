@@ -32,50 +32,44 @@
     "clean:purge": "jest --clearCache && git clean -fXd",
     "data": "docker-compose -f ./docker-postgres.yaml up",
     "format": "prettier --write ./**/*.{json,md,scss,yaml,yml,js,jsx,ts,tsx} --ignore-path .gitignore",
-    "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
-    "generate:nexus": "ts-node --transpile-only src/schema",
-    "generate:prisma": "prisma2 generate",
+    "generate": "prisma2 generate",
     "lint": "npm run format && tsc --allowJs --noEmit && eslint --ext .ts,.tsx ./",
     "lint:fix": "npm run format && tsc --noEmit && eslint --ext .ts,.tsx --fix ./",
-    "postinstall": "npm run generate",
-    "prepublish": "npm run build",
     "prisma": "prisma2",
     "start": "npm run generate && babel-node src --extensions '.ts,.tsx'",
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@prisma/photon": "2.0.0-preview017.2",
     "apollo-server": "^2.9.12",
-    "bcrypt": "^3.0.7",
     "core-js": "^3.4.7",
+    "dataloader": "^2.0.0",
     "graphql": "^14.5.8",
-    "jsonwebtoken": "^8.5.1",
-    "nexus": "0.12.0-rc.5",
-    "nexus-prisma": "0.6.1",
-    "prisma2": "2.0.0-preview017.2",
-    "ts-node": "8.5.4"
-  },
-  "prettier": {
-    "singleQuote": true
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "0.18.0-beta.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/preset-typescript": "^7.7.4",
-    "@types/bcrypt": "^3.0.0",
     "@types/jest": "^24.0.23",
-    "@types/jsonwebtoken": "^8.3.5",
     "@types/node": "^12.12.14",
-    "@types/node-fetch": "^2.5.4",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "babel-plugin-transform-typescript-metadata": "^0.2.2",
     "babel-preset-jam": "^0.4.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-config-jam": "^0.2.20",
     "jest": "^24.9.0",
+    "prisma2": "2.0.0-preview017.1",
+    "typegraphql-prisma": "^0.1.1",
     "typescript": "^3.7.2"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "engines": {
     "node": ">=6.0.0"
