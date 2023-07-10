@@ -6,6 +6,8 @@
 
 Please ★ this repo if you found it useful ★ ★ ★
 
+![](assets/prisma-apollo-example.png)
+
 ## Features
 
 - prisma
